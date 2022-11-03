@@ -1,8 +1,7 @@
 # Arrglar scroll
 from PySide6.QtWidgets import QApplication
 
-from controllers.main_window import MainForm 
-from controllers.table_bcp import BCP_table
+from view.ui_mainWindow import Ui_MainWindow as MainForm
 import sys
 
 if __name__ == '__main__':
