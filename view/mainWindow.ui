@@ -26,22 +26,25 @@
       <height>531</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
     <property name="title">
      <string/>
     </property>
     <widget class="QPushButton" name="pushButton_Start">
      <property name="geometry">
       <rect>
-       <x>110</x>
-       <y>460</y>
-       <width>121</width>
-       <height>41</height>
+       <x>40</x>
+       <y>430</y>
+       <width>201</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(0, 153, 117);
+font: 19pt &quot;Impact&quot;;
 color: #FFFFFF;
-font: 75 12pt &quot;Microsoft YaHei&quot;;
 border-radius: 10px;</string>
      </property>
      <property name="text">
@@ -51,8 +54,8 @@ border-radius: 10px;</string>
     <widget class="QLabel" name="label_titulo_Process">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>20</y>
+       <x>110</x>
+       <y>30</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -69,10 +72,10 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
     <widget class="QGroupBox" name="groupBox_ProcessContainer">
      <property name="geometry">
       <rect>
-       <x>60</x>
+       <x>30</x>
        <y>80</y>
-       <width>211</width>
-       <height>331</height>
+       <width>221</width>
+       <height>321</height>
       </rect>
      </property>
      <property name="title">
@@ -82,17 +85,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>10</y>
-        <width>31</width>
-        <height>31</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QGraphicsView" name="graphicsView_2">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>10</y>
+        <y>30</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -102,7 +95,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>10</y>
+        <y>30</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -112,7 +105,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>10</y>
+        <y>30</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -122,7 +115,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>170</x>
-        <y>10</y>
+        <y>30</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -132,7 +125,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>70</y>
+        <y>90</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -142,7 +135,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>130</y>
+        <y>150</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -152,7 +145,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>190</y>
+        <y>210</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -162,7 +155,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>250</y>
+        <y>270</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -172,7 +165,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>70</y>
+        <y>90</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -182,7 +175,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>130</y>
+        <y>150</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -192,7 +185,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>190</y>
+        <y>210</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -202,7 +195,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>70</y>
+        <y>90</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -212,7 +205,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>70</y>
+        <y>90</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -222,7 +215,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>170</x>
-        <y>70</y>
+        <y>90</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -232,7 +225,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>130</y>
+        <y>150</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -242,7 +235,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>130</y>
+        <y>150</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -252,7 +245,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>170</x>
-        <y>130</y>
+        <y>150</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -262,7 +255,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>190</y>
+        <y>210</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -272,7 +265,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>190</y>
+        <y>210</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -282,7 +275,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>170</x>
-        <y>190</y>
+        <y>210</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -292,7 +285,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>250</y>
+        <y>270</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -302,7 +295,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>90</x>
-        <y>250</y>
+        <y>270</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -312,7 +305,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>250</y>
+        <y>270</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -322,19 +315,19 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>170</x>
-        <y>250</y>
+        <y>270</y>
         <width>31</width>
         <height>31</height>
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="label_1">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>50</y>
-        <width>20</width>
-        <height>21</height>
+        <y>10</y>
+        <width>21</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="autoFillBackground">
@@ -354,8 +347,8 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>50</y>
-        <width>20</width>
+        <y>10</y>
+        <width>16</width>
         <height>21</height>
        </rect>
       </property>
@@ -373,11 +366,14 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       </property>
      </widget>
      <widget class="QLabel" name="label_3">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>50</y>
-        <width>20</width>
+        <y>10</y>
+        <width>16</width>
         <height>21</height>
        </rect>
       </property>
@@ -387,18 +383,33 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 255)</string>
       </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
       <property name="text">
-       <string>3</string>
+       <string notr="true">3</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="indent">
+       <number>4</number>
       </property>
      </widget>
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>50</y>
+        <y>10</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -412,6 +423,9 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="text">
        <string>4</string>
       </property>
+      <property name="textFormat">
+       <enum>Qt::MarkdownText</enum>
+      </property>
       <property name="scaledContents">
        <bool>true</bool>
       </property>
@@ -420,7 +434,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>180</x>
-        <y>50</y>
+        <y>10</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -442,7 +456,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>110</y>
+        <y>70</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -464,7 +478,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>110</y>
+        <y>70</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -486,7 +500,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>110</y>
+        <y>70</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -508,7 +522,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>110</y>
+        <y>70</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -530,7 +544,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>180</x>
-        <y>110</y>
+        <y>70</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -552,7 +566,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>170</y>
+        <y>130</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -574,7 +588,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>170</y>
+        <y>130</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -596,7 +610,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>170</y>
+        <y>130</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -618,7 +632,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>170</y>
+        <y>130</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -640,7 +654,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>180</x>
-        <y>170</y>
+        <y>130</y>
         <width>16</width>
         <height>21</height>
        </rect>
@@ -662,7 +676,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>230</y>
+        <y>190</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -684,7 +698,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>230</y>
+        <y>190</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -706,7 +720,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>230</y>
+        <y>190</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -728,7 +742,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>230</y>
+        <y>190</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -750,7 +764,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>180</x>
-        <y>230</y>
+        <y>190</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -772,7 +786,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>290</y>
+        <y>250</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -794,7 +808,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>290</y>
+        <y>250</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -816,7 +830,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>290</y>
+        <y>250</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -838,7 +852,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>140</x>
-        <y>290</y>
+        <y>250</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -860,7 +874,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <property name="geometry">
        <rect>
         <x>180</x>
-        <y>290</y>
+        <y>250</y>
         <width>20</width>
         <height>21</height>
        </rect>
@@ -878,6 +892,66 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
        <bool>true</bool>
       </property>
      </widget>
+     <widget class="QGraphicsView" name="graphicsView_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <zorder>label_25</zorder>
+     <zorder>label_24</zorder>
+     <zorder>label_23</zorder>
+     <zorder>label_22</zorder>
+     <zorder>label_21</zorder>
+     <zorder>label_20</zorder>
+     <zorder>label_19</zorder>
+     <zorder>label_18</zorder>
+     <zorder>label_17</zorder>
+     <zorder>label_16</zorder>
+     <zorder>label_15</zorder>
+     <zorder>label_14</zorder>
+     <zorder>label_12</zorder>
+     <zorder>label_13</zorder>
+     <zorder>label_11</zorder>
+     <zorder>label_10</zorder>
+     <zorder>label_9</zorder>
+     <zorder>label_8</zorder>
+     <zorder>label_7</zorder>
+     <zorder>label_6</zorder>
+     <zorder>label_5</zorder>
+     <zorder>label_4</zorder>
+     <zorder>label_3</zorder>
+     <zorder>graphicsView_1</zorder>
+     <zorder>graphicsView_3</zorder>
+     <zorder>graphicsView_4</zorder>
+     <zorder>graphicsView_5</zorder>
+     <zorder>graphicsView_6</zorder>
+     <zorder>graphicsView_7</zorder>
+     <zorder>graphicsView_8</zorder>
+     <zorder>graphicsView_9</zorder>
+     <zorder>graphicsView_10</zorder>
+     <zorder>graphicsView_11</zorder>
+     <zorder>graphicsView_12</zorder>
+     <zorder>graphicsView_13</zorder>
+     <zorder>graphicsView_14</zorder>
+     <zorder>graphicsView_15</zorder>
+     <zorder>graphicsView_16</zorder>
+     <zorder>graphicsView_17</zorder>
+     <zorder>graphicsView_18</zorder>
+     <zorder>graphicsView_19</zorder>
+     <zorder>graphicsView_20</zorder>
+     <zorder>graphicsView_21</zorder>
+     <zorder>graphicsView_22</zorder>
+     <zorder>graphicsView_23</zorder>
+     <zorder>graphicsView_24</zorder>
+     <zorder>graphicsView_25</zorder>
+     <zorder>label_1</zorder>
+     <zorder>label_2</zorder>
+     <zorder>graphicsView_2</zorder>
     </widget>
    </widget>
    <widget class="QGroupBox" name="groupBoxFirst">
@@ -892,38 +966,13 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
     <property name="title">
      <string/>
     </property>
-    <widget class="QLabel" name="imageProductorAwake">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>110</y>
-       <width>151</width>
-       <height>151</height>
-      </rect>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">image: url(:/ConsumerAwake/farmer (1).png);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>:/newPrefix/farmer.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="textBox_StatusProductor">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>280</y>
-       <width>161</width>
-       <height>35</height>
+       <x>30</x>
+       <y>310</y>
+       <width>171</width>
+       <height>81</height>
       </rect>
      </property>
      <property name="minimumSize">
@@ -932,11 +981,11 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
        <height>35</height>
       </size>
      </property>
-     <property name="maximumSize">
-      <size>
-       <width>230</width>
-       <height>35</height>
-      </size>
+     <property name="tabletTracking">
+      <bool>true</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(52, 62, 64);
@@ -966,6 +1015,47 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <string>Productor</string>
      </property>
     </widget>
+    <widget class="QLabel" name="imageProductorAwake">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>110</y>
+       <width>151</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/productorAwake/Productor.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="productor.qrc">:/productorAwake/Productor.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_StatusProductor">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>290</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Estado:</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBoxLast">
     <property name="geometry">
@@ -982,7 +1072,7 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
     <widget class="QLabel" name="label_tittleConsumer">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>60</x>
        <y>60</y>
        <width>121</width>
        <height>31</height>
@@ -997,13 +1087,38 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <string>Consumidor</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="textBox_StatusConsumer">
+    <widget class="QLabel" name="imageConsumerAwake">
      <property name="geometry">
       <rect>
        <x>40</x>
-       <y>270</y>
-       <width>161</width>
-       <height>35</height>
+       <y>110</y>
+       <width>151</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image:url(:/ConsumerAwake/Consumer.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="consumer.qrc">:/ConsumerAwake/Consumer.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="textBox_StatusConsumer">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>310</y>
+       <width>171</width>
+       <height>81</height>
       </rect>
      </property>
      <property name="minimumSize">
@@ -1012,11 +1127,11 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
        <height>35</height>
       </size>
      </property>
-     <property name="maximumSize">
-      <size>
-       <width>230</width>
-       <height>35</height>
-      </size>
+     <property name="tabletTracking">
+      <bool>true</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(52, 62, 64);
@@ -1026,6 +1141,22 @@ border-radius: 4px;</string>
      </property>
      <property name="text">
       <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_StatusConsumer">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>290</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Estado</string>
      </property>
     </widget>
    </widget>
@@ -1044,6 +1175,7 @@ border-radius: 4px;</string>
  </widget>
  <resources>
   <include location="consumer.qrc"/>
+  <include location="productor.qrc"/>
  </resources>
  <connections/>
 </ui>
