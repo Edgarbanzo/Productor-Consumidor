@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'mainWindow.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.1
+## Created by: Qt User Interface Compiler version 6.3.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -354,12 +354,17 @@ class Ui_MainWindow(object):
         self.imageProductorAwake.setGeometry(QRect(50, 110, 151, 151))
         self.imageProductorAwake.setAutoFillBackground(False)
         self.imageProductorAwake.setStyleSheet(u"")
-        self.imageProductorAwake.setPixmap(QPixmap(u"../images/Productor.png"))
+        self.imageProductorAwake.setPixmap(QPixmap(u"images/Productor.png"))
         self.imageProductorAwake.setScaledContents(True)
         self.label_StatusProductor = QLabel(self.groupBoxFirst)
         self.label_StatusProductor.setObjectName(u"label_StatusProductor")
         self.label_StatusProductor.setGeometry(QRect(40, 290, 51, 16))
         self.label_StatusProductor.setStyleSheet(u"color:rgb(255, 255, 255);")
+        self.label = QLabel(self.groupBoxFirst)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(180, 95, 51, 41))
+        self.label.setPixmap(QPixmap(u"images/zzz.png"))
+        self.label.setScaledContents(True)
         self.groupBoxLast = QGroupBox(self.centralwidget)
         self.groupBoxLast.setObjectName(u"groupBoxLast")
         self.groupBoxLast.setGeometry(QRect(570, 10, 221, 531))
@@ -374,7 +379,7 @@ class Ui_MainWindow(object):
         self.imageConsumerAwake.setGeometry(QRect(40, 110, 151, 151))
         self.imageConsumerAwake.setAutoFillBackground(False)
         self.imageConsumerAwake.setStyleSheet(u"")
-        self.imageConsumerAwake.setPixmap(QPixmap(u"../images/Consumer.png"))
+        self.imageConsumerAwake.setPixmap(QPixmap(u"images/Consumer.png"))
         self.imageConsumerAwake.setScaledContents(True)
         self.textBox_StatusConsumer = QLineEdit(self.groupBoxLast)
         self.textBox_StatusConsumer.setObjectName(u"textBox_StatusConsumer")
@@ -390,6 +395,11 @@ class Ui_MainWindow(object):
         self.label_StatusConsumer.setObjectName(u"label_StatusConsumer")
         self.label_StatusConsumer.setGeometry(QRect(50, 290, 51, 16))
         self.label_StatusConsumer.setStyleSheet(u"color:rgb(255, 255, 255);")
+        self.label_26 = QLabel(self.groupBoxLast)
+        self.label_26.setObjectName(u"label_26")
+        self.label_26.setGeometry(QRect(170, 100, 41, 31))
+        self.label_26.setPixmap(QPixmap(u"images/zzz.png"))
+        self.label_26.setScaledContents(True)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -439,10 +449,12 @@ class Ui_MainWindow(object):
         self.label_Productor.setText(QCoreApplication.translate("MainWindow", u"Productor", None))
         self.imageProductorAwake.setText("")
         self.label_StatusProductor.setText(QCoreApplication.translate("MainWindow", u"Estado:", None))
+        self.label.setText("")
         self.groupBoxLast.setTitle("")
         self.label_tittleConsumer.setText(QCoreApplication.translate("MainWindow", u"Consumidor", None))
         self.imageConsumerAwake.setText("")
         self.textBox_StatusConsumer.setText("")
         self.label_StatusConsumer.setText(QCoreApplication.translate("MainWindow", u"Estado", None))
+        self.label_26.setText("")
     # retranslateUi
 
