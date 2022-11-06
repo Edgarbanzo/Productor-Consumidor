@@ -36,26 +36,102 @@ class MainForm(QMainWindow, MainWindow):
         self.consumer = Consumer()
         self.productsLit = []
         
-        self.startExecution()
-        
+        self.prepareGrahpicsView()
         
         
     def startExecution(self):
         self.producer.setProduceItems(self.getRandNum())
         self.consumer.setRemainingTime(self.getRandTime())
-        self.prepareGrahpicsView()
         
+        while(self.producer.isAvailable()):
+            self.fillProducts()
     
     def stopExecution(self):
         pass
     
     def fillProducts(self):
         index = self.producer.getLastItemIndex()
+        if(not self.producer.isAvailable()):
+            return
         if(index == 0):
             self.graphicsView_1.setVisible(True)
+            
+        elif(index == 1):
+            self.graphicsView_2.setVisible(True)
+            
+        elif(index == 2):
+            self.graphicsView_3.setVisible(True)
+            
+        elif(index == 3):
+            self.graphicsView_4.setVisible(True)
+            
+        elif(index == 4):
+            self.graphicsView_5.setVisible(True)
+            
+        elif(index == 5):
+            self.graphicsView_6.setVisible(True)
+            
+        elif(index == 6):
+            self.graphicsView_7.setVisible(True)
+            
+        elif(index == 7):
+            self.graphicsView_8.setVisible(True)
+            
+        elif(index == 8):
+            self.graphicsView_9.setVisible(True)
+            
+        elif(index == 9):
+            self.graphicsView_10.setVisible(True)
+            
+        elif(index == 10):
+            self.graphicsView_11.setVisible(True)
+            
+        elif(index == 11):
+            self.graphicsView_12.setVisible(True)
+            
+        elif(index == 12):
+            self.graphicsView_13.setVisible(True)
+            
+        elif(index == 13):
+            self.graphicsView_14.setVisible(True)
+            
+        elif(index == 14):
+            self.graphicsView_15.setVisible(True)
+            
+        elif(index == 15):
+            self.graphicsView_16.setVisible(True)
+            
+        elif(index == 16):
+            self.graphicsView_17.setVisible(True)
+            
+        elif(index == 17):
+            self.graphicsView_18.setVisible(True)
+            
+        elif(index == 18):
+            self.graphicsView_19.setVisible(True)
+            
+        elif(index == 19):
+            self.graphicsView_20.setVisible(True)
+            
+        elif(index == 20):
+            self.graphicsView_21.setVisible(True)
+            
+        elif(index == 21):
+            self.graphicsView_22.setVisible(True)
+            
+        elif(index == 22):
+            self.graphicsView_23.setVisible(True)
+            
+        elif(index == 23):
+            self.graphicsView_24.setVisible(True)
+            
+        elif(index == 24):
+            self.graphicsView_25.setVisible(True)
         
+        self.producer.update()
+        index += 1
+        return
     
-        
     def getRandTime(self):
         return randint(1, 10)
     

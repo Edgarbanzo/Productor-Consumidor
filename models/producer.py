@@ -16,7 +16,7 @@ class Producer:
         return self._produceItems
     
     def isAvailable(self) -> bool:
-        return self._available
+        return self._available and self._produceItems > 0
     
     def getLastItemIndex(self) -> int:
         return self._lasItemIndx
@@ -29,9 +29,25 @@ class Producer:
     
     def setProduceItems(self, produceItems: int) -> None:
         self._produceItems = produceItems
+        if(self._produceItems > 0):
+            self._available = True
     
     def setAvailability(self, available: bool) -> None:
         self._available = available
     
     def setLastItemIndex(self, lastItemIndex: int) -> None:
         self._lasItemIndx = lastItemIndex
+    
+    def update(self) -> None:
+        if(self._sleep):
+            self._remainingTime -= 1
+            if(self._remainingTime == 0):
+                self._sleep = False
+        else:
+            if(self._produceItems > 0):
+                self._produceItems -= 1
+                self._lasItemIndx += 1
+            else:
+                self._sleep = True
+                self.isAvailable = False
+            
