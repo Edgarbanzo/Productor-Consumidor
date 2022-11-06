@@ -1,12 +1,12 @@
 # Arrglar scroll
 from PySide6.QtWidgets import QApplication
 
-from view.ui_mainWindow import Ui_MainWindow as MainForm
+from controllers.main_window import MainForm
 import sys
 
 if __name__ == '__main__':
     # Aplicación de Qt
-    app = QApplication()
+    app = QApplication(sys.argv)
     window =  MainForm()
     # Se hace visible el botón
     window.show()

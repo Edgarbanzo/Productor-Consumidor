@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="ConsumerAwake">
-    <file>Consumer.png</file>
-  </qresource>
-  <qresource prefix="ConsumerSleep"/>
-</RCC>

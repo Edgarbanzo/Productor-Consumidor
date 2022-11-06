@@ -1028,13 +1028,13 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/productorAwake/Productor.png);</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="productor.qrc">:/productorAwake/Productor.png</pixmap>
+      <pixmap>../images/Productor.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -1100,13 +1100,13 @@ font: 87 14pt &quot;Segoe UI Black&quot;;
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">image:url(:/ConsumerAwake/Consumer.png);</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="consumer.qrc">:/ConsumerAwake/Consumer.png</pixmap>
+      <pixmap>../images/Consumer.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -1173,9 +1173,6 @@ border-radius: 4px;</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="consumer.qrc"/>
-  <include location="productor.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

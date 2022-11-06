@@ -1,8 +1,0 @@
-<RCC>
-  <qresource prefix="productorAwake">
-    <file>Productor.png</file>
-  </qresource>
-  <qresource prefix="productorSleep">
-    <file>zzz.png</file>
-  </qresource>
-</RCC>

@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'mainWindow.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.2
+## Created by: Qt User Interface Compiler version 6.3.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -18,8 +18,6 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QGraphicsView, QGroupBox,
     QLabel, QLineEdit, QMainWindow, QMenuBar,
     QPushButton, QSizePolicy, QStatusBar, QWidget)
-import consumer_rc
-import productor_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -355,8 +353,8 @@ class Ui_MainWindow(object):
         self.imageProductorAwake.setObjectName(u"imageProductorAwake")
         self.imageProductorAwake.setGeometry(QRect(50, 110, 151, 151))
         self.imageProductorAwake.setAutoFillBackground(False)
-        self.imageProductorAwake.setStyleSheet(u"image: url(:/productorAwake/Productor.png);")
-        self.imageProductorAwake.setPixmap(QPixmap(u":/productorAwake/Productor.png"))
+        self.imageProductorAwake.setStyleSheet(u"")
+        self.imageProductorAwake.setPixmap(QPixmap(u"../images/Productor.png"))
         self.imageProductorAwake.setScaledContents(True)
         self.label_StatusProductor = QLabel(self.groupBoxFirst)
         self.label_StatusProductor.setObjectName(u"label_StatusProductor")
@@ -375,8 +373,8 @@ class Ui_MainWindow(object):
         self.imageConsumerAwake.setObjectName(u"imageConsumerAwake")
         self.imageConsumerAwake.setGeometry(QRect(40, 110, 151, 151))
         self.imageConsumerAwake.setAutoFillBackground(False)
-        self.imageConsumerAwake.setStyleSheet(u"image:url(:/ConsumerAwake/Consumer.png);")
-        self.imageConsumerAwake.setPixmap(QPixmap(u":/ConsumerAwake/Consumer.png"))
+        self.imageConsumerAwake.setStyleSheet(u"")
+        self.imageConsumerAwake.setPixmap(QPixmap(u"../images/Consumer.png"))
         self.imageConsumerAwake.setScaledContents(True)
         self.textBox_StatusConsumer = QLineEdit(self.groupBoxLast)
         self.textBox_StatusConsumer.setObjectName(u"textBox_StatusConsumer")
