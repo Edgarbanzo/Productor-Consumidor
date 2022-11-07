@@ -303,6 +303,8 @@ class MainForm(QMainWindow, MainWindow):
             elif(option == "c"):
                 self.executeFlag = True
                 self.execution()
+            else:
+                return
         except:
             pass
     
