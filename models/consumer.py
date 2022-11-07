@@ -39,7 +39,7 @@ class Consumer:
     def update(self):
         if(self._sleep):
             self._remainingTime -= 1
-            if(self._remainingTime == 0):
+            if(not self._remainingTime):
                 self._sleep = False
                 self._available = True
         else:
@@ -48,6 +48,6 @@ class Consumer:
                 self._lasItemIndx += 1
                 if(self._lasItemIndx == 25):
                     self._lasItemIndx = 0
-            else:
+            if(not self._consumeItems):
                 self._sleep = True
                 self._available = False

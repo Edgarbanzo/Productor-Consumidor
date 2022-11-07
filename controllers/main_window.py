@@ -45,6 +45,7 @@ class MainForm(QMainWindow, MainWindow):
         
     def startExecution(self):
         self.producer.setProduceItems(self.getRandNum())
+        self.updateUI(up.PRODUCER)
         while(self.producer.isAvailable()):
             self.fillProducts()
             self.updateUI(up.PRODUCER)
@@ -52,14 +53,16 @@ class MainForm(QMainWindow, MainWindow):
             
         self.consumer.setRemainingTime(self.getRandTime())
         self.consumer.setConsumeItems(self.getRandNum())
+        self.consumer.setLastItemIndex(self.firstProduct)
+        self.updateUI(up.CONSUMER)
         self.producer.setRemainingTime(self.getRandTime())
-        self.consumer.setConsumeItems(self.getRandNum())
+        self.producer.setProduceItems(self.getRandNum())
         self.producer.setSleep(True)
         self.producer.setAvailability(False)
-        self.updateUI(up.CONSUMER)
         self.updateUI(up.PRODUCER)
         self.updateUI(up.TIME)
-        self.consumer.setLastItemIndex(self.firstProduct)
+        
+        self.execution()
         
         
     def execution(self):
@@ -72,9 +75,9 @@ class MainForm(QMainWindow, MainWindow):
                     sleep(1)
                 self.producer.setRemainingTime(self.getRandTime())
                 self.producer.setProduceItems(self.getRandNum())
+                self.updateUI(up.PRODUCER)
             #Tiempo del consumidor llega a 0
             if(not self.consumer.isSleeping()):
-                
                 while(self.consumer.isAvailable()):
                     self.consumeProduct(self.consumer.getLastItemIndex())
                     self.updateUI(up.CONSUMER)
@@ -82,7 +85,7 @@ class MainForm(QMainWindow, MainWindow):
                 self.firstProduct = self.producer.getLastItemIndex()
                 self.consumer.setRemainingTime(self.getRandTime())
                 self.consumer.setConsumeItems(self.getRandNum())
-            
+                self.updateUI(up.CONSUMER)
             self.producer.update()
             self.consumer.update()
             self.updateUI(up.TIME)
@@ -191,7 +194,7 @@ class MainForm(QMainWindow, MainWindow):
             if(self.consumer.isSleeping()):
                 self.label_ZConsumidor.setVisible(True)
                 self.textBox_StatusConsumer.setText("Durmiendo")
-            self.textBox_TiempoConsumidor_2.setText(str(self.consumer.getRemainingTime()))
+            self.textBox_TiempoConsumidor_2.setText(str(self.consumer.getConsumeItems()))
         if(uiUpdate == up.END):
             pass
         QCoreApplication.processEvents()

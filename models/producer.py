@@ -16,7 +16,7 @@ class Producer:
         return self._produceItems
     
     def isAvailable(self) -> bool:
-        return self._available and self._produceItems > 0
+        return self._available
     
     def getLastItemIndex(self) -> int:
         return self._lasItemIndx
@@ -41,7 +41,7 @@ class Producer:
     def update(self) -> None:
         if(self._sleep):
             self._remainingTime -= 1
-            if(self._remainingTime == 0):
+            if(not self._remainingTime):
                 self._sleep = False
                 self._available = True
         else:
@@ -50,7 +50,7 @@ class Producer:
                 self._lasItemIndx += 1
                 if(self._lasItemIndx == 25):
                     self._lasItemIndx = 0
-            else:
+            if(not self._produceItems):
                 self._sleep = True
                 self._available = False
             
