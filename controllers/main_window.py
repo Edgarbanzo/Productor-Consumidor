@@ -13,10 +13,12 @@ from view.ui_mainWindow import Ui_MainWindow as MainWindow
 #Model Imports
 from models.consumer import Consumer
 from models.producer import Producer
+from models.updateType import Updates as up
 
 #Library Imports
 import keyboard
 from random import randint
+from time import sleep
 
 class MainForm(QMainWindow, MainWindow):
     
@@ -34,20 +36,168 @@ class MainForm(QMainWindow, MainWindow):
         #Variables
         self.producer = Producer()
         self.consumer = Consumer()
-        self.productsLit = []
+        self.firstProduct = 0
+        self.productList = [False] * 25
+        self.executeFlag = True
         
         self.prepareGrahpicsView()
         
         
     def startExecution(self):
         self.producer.setProduceItems(self.getRandNum())
-        self.consumer.setRemainingTime(self.getRandTime())
-        
         while(self.producer.isAvailable()):
             self.fillProducts()
+            self.updateUI(up.PRODUCER)
+            sleep(1)
+            
+        self.consumer.setRemainingTime(self.getRandTime())
+        self.consumer.setConsumeItems(self.getRandNum())
+        self.producer.setRemainingTime(self.getRandTime())
+        self.consumer.setConsumeItems(self.getRandNum())
+        self.producer.setSleep(True)
+        self.producer.setAvailability(False)
+        self.updateUI(up.CONSUMER)
+        self.updateUI(up.PRODUCER)
+        self.updateUI(up.TIME)
+        self.consumer.setLastItemIndex(self.firstProduct)
+        
+        
+    def execution(self):
+        while(self.executeFlag):
+            #Tiempo del productor llega a 0
+            if(not self.producer.isSleeping()):
+                while(self.producer.isAvailable()):
+                    self.fillProducts()
+                    self.updateUI(up.PRODUCER)
+                    sleep(1)
+                self.producer.setRemainingTime(self.getRandTime())
+                self.producer.setProduceItems(self.getRandNum())
+            #Tiempo del consumidor llega a 0
+            if(not self.consumer.isSleeping()):
+                
+                while(self.consumer.isAvailable()):
+                    self.consumeProduct(self.consumer.getLastItemIndex())
+                    self.updateUI(up.CONSUMER)
+                    sleep(1)
+                self.firstProduct = self.producer.getLastItemIndex()
+                self.consumer.setRemainingTime(self.getRandTime())
+                self.consumer.setConsumeItems(self.getRandNum())
+            
+            self.producer.update()
+            self.consumer.update()
+            self.updateUI(up.TIME)
+            sleep(1)
+        
+        
+    def consumeProduct(self,indx: int):
+        index = indx
+        
+        if(not self.consumer.isAvailable()):
+            return
+        if(not self.productList[index]):
+            self.consumer.setConsumeItems(0)
+            self.consumer.update()
+            return
+        if(index == 0):
+            
+            self.graphicsView_1.setVisible(False)
+            
+        elif(index == 1):
+            self.graphicsView_2.setVisible(False)
+            
+        elif(index == 2):
+            self.graphicsView_3.setVisible(False)
+            
+        elif(index == 3):
+            self.graphicsView_4.setVisible(False)
+            
+        elif(index == 4):
+            self.graphicsView_5.setVisible(False)
+            
+        elif(index == 5):
+            self.graphicsView_6.setVisible(False)
+            
+        elif(index == 6):
+            self.graphicsView_7.setVisible(False)
+            
+        elif(index == 7):
+            self.graphicsView_8.setVisible(False)
+            
+        elif(index == 8):
+            self.graphicsView_9.setVisible(False)
+            
+        elif(index == 9):
+            self.graphicsView_10.setVisible(False)
+            
+        elif(index == 10):
+            self.graphicsView_11.setVisible(False)
+            
+        elif(index == 11):
+            self.graphicsView_12.setVisible(False)
+            
+        elif(index == 12):
+            self.graphicsView_13.setVisible(False)
+            
+        elif(index == 13):
+            self.graphicsView_14.setVisible(False)
+            
+        elif(index == 14):
+            self.graphicsView_15.setVisible(False)
+            
+        elif(index == 15):
+            self.graphicsView_16.setVisible(False)
+            
+        elif(index == 16):
+            self.graphicsView_17.setVisible(False)
+            
+        elif(index == 17):
+            self.graphicsView_18.setVisible(False)
+            
+        elif(index == 18):
+            self.graphicsView_19.setVisible(False)
+            
+        elif(index == 19):
+            self.graphicsView_20.setVisible(False)
+            
+        elif(index == 20):
+            self.graphicsView_21.setVisible(False)
+            
+        elif(index == 21):
+            self.graphicsView_22.setVisible(False)
+            
+        elif(index == 22):
+            self.graphicsView_23.setVisible(False)
+            
+        elif(index == 23):
+            self.graphicsView_24.setVisible(False)
+            
+        elif(index == 24):
+            self.graphicsView_25.setVisible(False)
+        
+        self.productList[index] = False
+        self.consumer.update()
+        return
+    
+    def updateUI(self, uiUpdate: int) -> None:
+        if(uiUpdate == up.TIME):
+            self.textBox_StatusProductor_2.setText(str(self.producer.getRemainingTime()))
+            self.textBox_TiempoConsumidor.setText(str(self.consumer.getRemainingTime()))
+        if(uiUpdate == up.PRODUCER):
+            if(self.producer.isSleeping()):
+                self.labelZProductor.setVisible(True)
+                self.textBox_StatusProductor.setText("Durmiendo")
+            self.textBox_ProductosProductor.setText(str(self.producer.getProduceItems()))
+        if(uiUpdate == up.CONSUMER):
+            if(self.consumer.isSleeping()):
+                self.label_ZConsumidor.setVisible(True)
+                self.textBox_StatusConsumer.setText("Durmiendo")
+            self.textBox_TiempoConsumidor_2.setText(str(self.consumer.getRemainingTime()))
+        if(uiUpdate == up.END):
+            pass
+        QCoreApplication.processEvents()
     
     def stopExecution(self):
-        pass
+        self.executeFlag = False
     
     def fillProducts(self):
         index = self.producer.getLastItemIndex()
@@ -128,12 +278,12 @@ class MainForm(QMainWindow, MainWindow):
         elif(index == 24):
             self.graphicsView_25.setVisible(True)
         
+        self.productList[index] = True
         self.producer.update()
-        index += 1
         return
     
     def getRandTime(self):
-        return randint(1, 10)
+        return randint(2, 10)
     
     def getRandNum(self) -> int:
         return randint(2,5)
@@ -143,6 +293,9 @@ class MainForm(QMainWindow, MainWindow):
             option = str(event.name).lower()
             if(option == "esc"):
                 self.stopExecution()
+            elif(option == "c"):
+                self.executeFlag = True
+                self.execution()
         except:
             pass
     
