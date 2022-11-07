@@ -64,7 +64,6 @@ class MainForm(QMainWindow, MainWindow):
         
         self.execution()
         
-        
     def execution(self):
         while(self.executeFlag):
             #Tiempo del productor llega a 0
@@ -91,6 +90,8 @@ class MainForm(QMainWindow, MainWindow):
             self.updateUI(up.TIME)
             sleep(1)
         
+    def stopExecution(self):
+        self.executeFlag = False
         
     def consumeProduct(self,indx: int):
         index = indx
@@ -189,18 +190,21 @@ class MainForm(QMainWindow, MainWindow):
             if(self.producer.isSleeping()):
                 self.labelZProductor.setVisible(True)
                 self.textBox_StatusProductor.setText("Durmiendo")
+            else:
+                self.labelZProductor.setVisible(False)
+                self.textBox_StatusProductor.setText("Produciendo")
             self.textBox_ProductosProductor.setText(str(self.producer.getProduceItems()))
         if(uiUpdate == up.CONSUMER):
             if(self.consumer.isSleeping()):
                 self.label_ZConsumidor.setVisible(True)
                 self.textBox_StatusConsumer.setText("Durmiendo")
+            else:
+                self.label_ZConsumidor.setVisible(False)
+                self.textBox_StatusConsumer.setText("Consumiendo")
             self.textBox_TiempoConsumidor_2.setText(str(self.consumer.getConsumeItems()))
         if(uiUpdate == up.END):
             pass
         QCoreApplication.processEvents()
-    
-    def stopExecution(self):
-        self.executeFlag = False
     
     def fillProducts(self):
         index = self.producer.getLastItemIndex()
